@@ -1,0 +1,87 @@
+.topRight{
+    position: absolute;
+}
+.topRight img{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    height: 20%;
+    /* z-index: 10; */
+}
+
+.icons{
+    /* height: 100%; */
+    max-width: fit-content;
+}
+
+/* #heartIcon{
+    clear: both;
+} */
+
+.container{
+    width: 100%;
+}
+
+.loginFormContainer{
+    z-index: -10;
+}
+
+.cls-1 {
+    fill: #fff;
+    stroke: #f559b1;
+    stroke-linecap: round;
+    stroke-width: 2px;
+  }
+
+  .cls-2 {
+    stroke: none;
+  }
+
+  .cls-3 {
+    fill: none;
+  }
+
+  label {
+    /* content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 20px; */
+    background: url("/src/assets/images/Rectangle\ 533.svg") ;
+  }
+
+  .formContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+  }
+
+  #Rectangle_2 {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_2 {
+    position: absolute;
+	  overflow: visible;
+
+	}
+  
+/* .vertical-center {
+    height:100%;
+    width:100%;
+  
+    text-align: center;  /* align the inline(-block) elements horizontally */
+    /* font: 0/0 a;         remove the gap between inline(-block) elements */
+  /* }  */
+  
+/* 
+div.col-6{
+    width: 50%;
+} */
