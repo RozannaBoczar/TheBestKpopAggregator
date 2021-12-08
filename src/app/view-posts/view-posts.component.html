@@ -1,14 +1,31 @@
 <div class="container-fluid">
     <div class="row">
                 
-        <h2>Choose a group</h2>
+        <h2 class='d-flex justify-content-center '>Choose a group</h2>
+  
+        <!-- <ul class = "bands">
+            <li *ngFor="let band of bands">
+                    <span class="badge">{{band.id}}</span>  {{band.name}}
+                  <button class="delete" title="delete idol" (click)="onChange(band)">x</button>
+            </li>
+        </ul> -->
+
+        <ng-select class="form-control" (onchange)="onChange($value)">
+            <ng-option *ngFor="let band of bands" [value]="band"> 
+               {{band.name}}
+            </ng-option>
+        </ng-select>
+
         <img src="assets/images/belkaPodChooseGroup.svg">
            
+
     </div>
+
+
 
     <div class="row">
              
-    <app-social-media-posts></app-social-media-posts>
+    <app-social-media-posts [band]="selectedBand"></app-social-media-posts>
            
     </div>
 
