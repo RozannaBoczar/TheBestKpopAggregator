@@ -72,6 +72,51 @@
 	  overflow: visible;
 
 	}
+
+  .css-input {
+    padding: 14px;
+    font-size: 25px;
+    border-width: 1px;
+    border-color: #f559b1;
+    background-color: #ffffff;
+    color: #f559b1;
+    border-style: solid;
+    border-radius: 50px;
+    box-shadow: -17px 0px 5px rgba(66,66,66,.0);
+    text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+}
+.css-input:focus {
+    outline:none;
+}
+
+#example {
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+   
+  padding: 5px;
+  background-color: white;
+  border: 2px solid red;
+}
+
+.img-container{
+  /* width:150px;
+  height:225px; */
+  /* position: relative; */
+  display: inline-block;
+  /* margin:5px; */
+}
+
+.img-text{
+  /* top:50%;
+  width:150px; */
+  /* height:50px;
+  margin-top: -25px; */
+  position: absolute;
+  /* background-color: yellow; */
+  display:block;
+}
+
   
 /* .vertical-center {
     height:100%;

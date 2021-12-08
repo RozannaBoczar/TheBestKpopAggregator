@@ -10,7 +10,7 @@
             </li>
         </ul> -->
 
-        <ng-select class="form-control" (onchange)="onChange($value)">
+        <ng-select class="form-control" [(ngModel)]="selectedBand">
             <ng-option *ngFor="let band of bands" [value]="band"> 
                {{band.name}}
             </ng-option>

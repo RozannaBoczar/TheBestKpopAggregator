@@ -13,6 +13,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { HelpComponent } from './help/help.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { TwitterApi} from 'twitter-api-v2';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgSelectModule
+    NgSelectModule,
+    FormsModule,
+    TwitterApi
   ],
   providers: [],
   bootstrap: [AppComponent]

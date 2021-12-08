@@ -12,7 +12,7 @@ export class BandService {
   constructor( private http: HttpClient) { }
 
   private bandsURL = 'api/bands';  // URL to web api
-
+  
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
