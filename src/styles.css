@@ -6,6 +6,8 @@ body{
   
 }
 
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
 @import url(//db.onlinewebfonts.com/c/7cc6719bd5f0310be3150ba33418e72e?family=Comic+Sans+MS);
 
 @font-face {
@@ -16,3 +18,4 @@ body{
     url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.woff") format("woff"), 
     url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.ttf") format("truetype"),
      url("//db.onlinewebfonts.com/t/7cc6719bd5f0310be3150ba33418e72e.svg#Comic Sans MS") format("svg"); }
+     
