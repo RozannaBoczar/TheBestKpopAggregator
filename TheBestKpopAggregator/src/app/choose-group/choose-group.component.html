@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+                
+        <h2 class='d-flex justify-content-center '>Choose a group</h2>
+
+        <!-- <ng-select [items]="bands"
+                   bindLabel="name"
+                   placeholder="Select Band"
+                   [(ngModel)]="selectedBand">
+        </ng-select>
+        <p>
+            Selected city: {{selectedBand | json}}
+        </p> -->
+
+        <ng-select class="form-control" [(ngModel)]="selectedBand">
+            <ng-option *ngFor="let band of bands" [value]="band"> 
+               {{band.name}}
+            </ng-option>
+        </ng-select>
+   
+        <img src="assets/images/belkaPodChooseGroup.svg">
+       
+
+    </div>
+
+
+
+    <div class="row">
+             
+    <app-view-posts [band]="selectedBand"></app-view-posts>
+           
+    </div>
+
+
+</div>
+    
