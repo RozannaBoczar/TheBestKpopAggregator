@@ -3,7 +3,7 @@
 
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading ">
-        <img style='width: 20rem;'src="assets/images/logo.svg">
+        <img style='width: 20rem;' class="logo" src="assets/images/logo.svg">
         </div>
         <div class="user-info d-flex flex-row ">
             <div class="p-2">
@@ -15,13 +15,25 @@
             </div>
            
         </div>
-      <div class="d-flex flex-column ">
-        <a href="#" class="bg-light p-2 text-center" routerLink="choose-groups">Dashboard</a>
-        <a href="#" class="bg-light p-2 text-center" routerLink="#">Manage Groups</a>
-        <a href="#" class=" bg-light p-2 text-center" routerLink="#">Settings</a>
-        <a href="#" class=" bg-light p-2 text-center" routerLink="#">Help</a>
-        <a href="#" class=" bg-light p-2 text-center" routerLink="#">About Us</a>
-        <a href="#" class="bg-light p-2 text-center">Log Out</a>
+      <div class="d-flex flex-column buffer">
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit = true" (mouseout)="hoverEdit = false" routerLink="choose-groups">
+          <img *ngIf="hoverEdit"  src="assets/images/pointerOnNavbar.svg">
+          Dashboard</a>
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit1 = true" (mouseout)="hoverEdit1 = false" routerLink="#">
+          <img *ngIf="hoverEdit1"  src="assets/images/pointerOnNavbar.svg">
+          Manage Groups</a>
+        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit2 = true" (mouseout)="hoverEdit2 = false" routerLink="#">
+          <img *ngIf="hoverEdit2"  src="assets/images/pointerOnNavbar.svg">
+          Settings</a>
+        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit3 = true" (mouseout)="hoverEdit3 = false" routerLink="#">
+          <img *ngIf="hoverEdit3"  src="assets/images/pointerOnNavbar.svg">
+          Help</a>
+        <a href="#" class=" bg-light p-2 text-center"  (mouseover)="hoverEdit4 = true" (mouseout)="hoverEdit4 = false"routerLink="#">
+          <img *ngIf="hoverEdit4"  src="assets/images/pointerOnNavbar.svg">
+          About Us</a>
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit5 = true" (mouseout)="hoverEdit5 = false">
+          <img *ngIf="hoverEdit5"  src="assets/images/pointerOnNavbar.svg">
+          Log Out</a>
       </div>
     </div>
     <!-- Page content wrapper-->

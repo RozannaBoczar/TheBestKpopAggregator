@@ -21,6 +21,20 @@ import { ChooseGroupComponent } from './choose-group/choose-group.component';
 import { ViewPostsComponent } from './view-posts/view-posts.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+
+const config = {
+   apiKey: "AIzaSyDao74-CDtE1BEhceNsG2033rm1-JPIdJQ",
+  authDomain: "kpopaggreagtor.firebaseapp.com",
+  projectId: "kpopaggreagtor",
+  storageBucket: "kpopaggreagtor.appspot.com",
+  messagingSenderId: "609541919620",
+  appId: "1:609541919620:web:11022e94b07d5b871b03d1",
+  measurementId: "G-10FJTDK3V4"
+};
 
 
 @NgModule({
@@ -39,9 +53,13 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
     NgSelectModule,
-    FormsModule
+    FormsModule,
+    // AngularFireModule.initializeApp(config),
+    // AngularFirestoreModule, // firestore
+    // AngularFireAuthModule, // auth
+    // AngularFireStorageModule // storage
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Band } from '../Band';
+import { SocialMedia } from '../SOCIALMEDIA';
 
 @Component({
   selector: 'app-view-posts',
@@ -10,6 +11,8 @@ export class ViewPostsComponent implements OnInit {
 
 
   @Input() band?: Band;
+
+  @Input() socialMedia?:SocialMedia;
 
   constructor() { }
 

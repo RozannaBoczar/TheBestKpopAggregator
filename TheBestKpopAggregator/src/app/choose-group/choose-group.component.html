@@ -1,33 +1,73 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="view-posts container-fluid">
+
+    <div class="d-flex container-fluid row h-30 " >
+        <div class="p-2 col-lg-6">
+
+            <div class="p-2 d-flex  align-content-center">
+                <h2 class="text-center" id="chooseGroup">Choose a group</h2>
+            </div>
+    
+            <div class="p-2 d-flex  align-content-center">
+    
+    
+    
+                <!-- <ng-select class="form-control" [(ngModel)]="selectedBand">
+                    <ng-option appendTo="body"  *ngFor="let band of bands" [value]="band"> 
+                       {{band.name}}
+                    </ng-option>
+                </ng-select> -->
+    
+                <ng-select  class="form-control"  [items]="bands"
+                bindLabel="name"
+                [ngModel]="selectedBand"
+                name="name"
+                 (ngModelChange)="selectBand($event)"
+                >
+               </ng-select>  
+    
+    
+            </div>
+
+        </div>
+        
+        <div class="p-2 col-lg-6 ">
+            <div class="p-2 d-flex  align-content-center">
+                <h2 class="text-center" id="chooseGroup">Choose a platform</h2>
+            </div>
+    
+            <div class="p-2 d-flex  align-content-around logos">
                 
-        <h2 class='d-flex justify-content-center '>Choose a group</h2>
-
-        <!-- <ng-select [items]="bands"
-                   bindLabel="name"
-                   placeholder="Select Band"
-                   [(ngModel)]="selectedBand">
-        </ng-select>
-        <p>
-            Selected city: {{selectedBand | json}}
-        </p> -->
-
-        <ng-select class="form-control" [(ngModel)]="selectedBand">
-            <ng-option *ngFor="let band of bands" [value]="band"> 
-               {{band.name}}
-            </ng-option>
-        </ng-select>
-   
-        <img src="assets/images/belkaPodChooseGroup.svg">
+                <div class="p-2 logo d-flex align-content-center" (click)="selectSocialMedia(0)" >
+                    <img src="assets/images/Icon ionic-logo-twitter.svg">
+    
+                </div>
+    
+                <div class="p-2 logo d-flex align-content-center" (click)="selectSocialMedia(2)">
+                    <img  src="assets/images/Icon zocial-instagram.svg">
+    
+                </div>
+                
+                <div class="p-2 logo d-flex align-content-center" (click)="selectSocialMedia(1)">
+                    <img src="assets/images/Icon simple-facebook.svg">
+    
+                </div>
+    
+            </div>
+    
+      
+        </div>
        
-
     </div>
 
+    <!-- <div class="p-2 d-flex  align-content-center">
+    
+        <img src="assets/images/belkaPodChooseGroup.svg">
+    </div> -->
 
 
-    <div class="row">
+    <div class="row viewPosts content">
              
-    <app-view-posts [band]="selectedBand"></app-view-posts>
+    <app-view-posts [band]="selectedBand" [socialMedia]="selectedMedia"></app-view-posts>
            
     </div>
 

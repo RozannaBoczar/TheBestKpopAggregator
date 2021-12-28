@@ -1,8 +1,17 @@
-<div *ngIf="band">
+<div class="container base">
+    <div *ngIf="band">
 
-    <h2> You chose {{band.name | uppercase}}</h2>
-   
+        <h2> You chose {{band.name | uppercase}}</h2>
+       
+    </div>
+    
+    <div *ngIf="socialMedia">
+    
+        <h2> You chose {{socialMedia.name | uppercase}}</h2>
+       
+    </div>
+    
+
 </div>
-
 
 

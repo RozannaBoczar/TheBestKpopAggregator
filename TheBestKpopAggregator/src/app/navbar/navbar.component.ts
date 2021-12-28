@@ -10,6 +10,12 @@ export class NavbarComponent implements OnInit {
 
   currentUser = "Rozia";
 
+  hoverEdit = false;
+  hoverEdit1 = false;
+  hoverEdit2 = false;
+  hoverEdit3 = false;
+  hoverEdit4 = false;
+  hoverEdit5 = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +24,7 @@ export class NavbarComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+
 
   }
 

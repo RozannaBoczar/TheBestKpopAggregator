@@ -18,6 +18,8 @@ body {
     
 
   }
+
+ 
   
   #sidebar-wrapper .sidebar-heading {
     /* padding: 0.875rem 1.25rem; */
@@ -56,8 +58,29 @@ body {
 
     .bg-light {
       background-color: white;
-      color: #F559B1
+      color: #F559B1;
+      margin-top: 15px;
+      margin-bottom: 15px;
+
   }
+a.bg-light:hover{
+  background-color: white!important;
+}
+a.bg-light:focus{
+  background-color: white;
+}
+button.bg-light:active{
+  background-color: white!important;
+}
+
+.bg-light:focus{
+  background-color: white!important;
+}
+.bg-light{
+  background-color: white!important;
+}
+
+
 
   .user-info{
     padding: 0.875rem 1.25rem;
@@ -69,5 +92,14 @@ body {
   a{
     text-decoration: none;
  }
+
  
+ /* .album-pic-exit {
+  display: none;
+}
+
+.album-pic:hover + img.album-pic-exit {
+  display:flex;
+} */
+
   /* #page-content-wrapper{background-color: lightblue;} */

@@ -1,0 +1,54 @@
+body {
+    position: relative;
+}
+html{
+    -webkit-tap-highlight-color: white;
+}
+#chooseGroup{
+    color: white;
+    font-size: 50px;
+}
+
+.view-posts{
+    padding: 40px;
+    margin-top: auto;
+}
+
+div.p-2{
+ justify-content: center;
+}
+
+.form-control{
+    width: 1200px;
+}
+
+.ng-option.ng-option-marked {
+    background-color: DodgerBlue;
+  }
+
+  .ng-option{
+      background-color: white;
+  }
+
+  .ng-dropdown-panel{
+      background-color: white!important;
+  }
+
+  .logos{
+    
+    width: 100%;
+}
+
+div.logo > img{
+    width: 50%;
+    
+}
+
+.viewPosts{
+    background-color: white;
+}
+
+.row.content {
+    flex: 1 1 auto;
+    height: 100vh;
+  }

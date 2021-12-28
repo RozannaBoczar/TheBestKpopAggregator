@@ -1,0 +1,16 @@
+.whiteBox{
+    background-color: white;
+    margin: 60px;
+}
+
+button#login-button{
+        /* stroke: transparent; */
+        outline: 0!important;
+        color:white;
+        border-width: 0;
+        background-color: white;
+}
+
+#register{
+    color: #F559B1;
+}
