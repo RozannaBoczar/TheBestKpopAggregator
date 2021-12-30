@@ -49,6 +49,6 @@ div.logo > img{
 }
 
 .row.content {
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
     height: 100vh;
   }

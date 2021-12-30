@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="181" height="35" viewBox="0 0 181 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f559b1;
+        font-size: 25px;
+        font-family: ComicSansMS, Comic Sans MS;
+      }
+    </style>
+  </defs>
+  <text id="email_mail.com" data-name="email@mail.com" class="cls-1" transform="translate(0 28)"><tspan x="0" y="0">email@mail.com</tspan></text>
+</svg>

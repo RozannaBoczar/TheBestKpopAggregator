@@ -1,0 +1,39 @@
+<div class="container based d-flex flex-column">
+
+
+    <div class="col-12 p-2 d-flex flex-column justify-content-center" *ngIf="band && socialMedia">
+
+        <div class="p-2 d-flex justify-content-center info">
+            <h2> {{band.name | uppercase}} {{socialMedia.name | uppercase}}</h2>
+        </div>
+        
+        <!-- zmienic na for z wybranego zespolu -->
+        <div class="p-2 d-flex justify-content-center">
+
+            <div class="d-flex flex-column bts" *ngIf="band.name=='BTS'">
+
+                
+                <div class="p-2" id="postText">
+                   <p class="text-center">
+                    멤버들 그리고 줴퀘 땡큐
+                   </p> 
+                   <p class="text-center" id="date">
+                    11:40 AM · 30 gru 2021
+                   </p> 
+                </div>
+            
+                <div class="p-2 justify-content-center postImg">
+                    <img src="assets/postImages/bts/post1.jpg">
+                </div>
+            
+        </div>
+
+        </div>
+
+        
+    </div>
+
+</div>
+
+
+
