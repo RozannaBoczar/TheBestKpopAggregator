@@ -93,7 +93,9 @@ button.bg-light:active{
     text-decoration: none;
  }
 
- 
+ #hello{
+   font-weight: bolder;
+ }
  /* .album-pic-exit {
   display: none;
 }

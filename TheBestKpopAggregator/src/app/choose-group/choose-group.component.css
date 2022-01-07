@@ -40,15 +40,17 @@ div.p-2{
 }
 
 div.logo > img{
-    width: 50%;
+    width: 30%;
     
 }
 
 .viewPosts{
     background-color: white;
+    height: 650px;
 }
 
 .row.content {
     /* flex: 1 1 auto; */
-    height: 100vh;
+    overflow:hidden;
+
   }

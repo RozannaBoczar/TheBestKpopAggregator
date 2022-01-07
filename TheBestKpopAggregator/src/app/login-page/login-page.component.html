@@ -14,8 +14,8 @@
                             <div class="img-text">
                                 <label for="exampleFormControlInput1" class="form-label">
                                   <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
-                                  <input type="email" class="css-input form-control"  [formControl]="email" id="exampleFormControlInput1"/>
-                                  
+                                  <input type="email" class="css-input form-control"  [formControl]="email" id="emailInput" #userEmail required/>
+                              
                                 </label>
                                 <!-- <img src="assets/images/Rectangle 533.svg"> -->
                               
@@ -28,19 +28,20 @@
 
                           <label for="exampleFormControlInput1" class="form-label">
                             <!-- <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"> -->
-                            <input type="password" class="css-input form-control" [formControl]="password" id="exampleFormControlInput1" />
+                            <input type="password" class="css-input form-control" [formControl]="password" id="passwordInput" #userPassword required />
                           </label>
 
                         </div>
                         
                         <div class="p-2 d-flex justify-content-center">
-
-                          <button id="login-button" routerLink="/user-page">
+                          <!-- (click)="authService.SignIn(userEmail.value, userPassword.value)" -->
+                          <!-- routerLink="/user-page" -->
+                          <button id="login-button"  (click)="SignIn(userEmail.value, userPassword.value)">
                       
                             <img  src="assets/images/logIn.svg" width=90% height=90%>
                             <!-- //class="img-fluid " -->
                         </button>
-                        <span id="register" class="align-self-center">Click to log in!</span>
+                        <span id="register" class="align-self-center" >Click to log in!</span>
                         </div>
 
                         <div class="p-2 d-flex justify-content-center">

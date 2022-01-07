@@ -1,37 +1,40 @@
+<!-- <div *ngIf="loggedIn">
+
+</div> -->
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
 
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading ">
+    <div class="bg-light border-right" id="sidebar-wrapper" >
+      <div class="sidebar-heading "> 
         <img style='width: 20rem;' class="logo" src="assets/images/logo.svg">
         </div>
-        <div class="user-info d-flex flex-row ">
-            <div class="p-2">
+        <div class="user-info d-flex flex-row justify-content-center">
+            <!-- <div class="p-2">
                 <img src="assets/images/profilePic.svg">
-            </div>
-            <div class="p-2 d-flex flex-column justify-content-center">
-                <div class="p-2 ">Hello!</div>
-                <div class="p-2 user-name">{{currentUser}}</div>
+            </div> -->
+            <div class="p-2 d-flex flex-column justify-content-center" >
+                <div class="p-2 " id="hello">Hello!</div>
+                <!-- <div class="p-2 user-name">{{currentUser}}</div> -->
             </div>
            
         </div>
       <div class="d-flex flex-column buffer">
-        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit = true" (mouseout)="hoverEdit = false" routerLink="choose-groups">
-          <img *ngIf="hoverEdit"  src="assets/images/pointerOnNavbar.svg">
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit = true" (mouseout)="hoverEdit = false" routerLink="choose-groups" routerLinkActive #link ="routerLinkActive">
+          <img *ngIf="hoverEdit || link.isActive"  src="assets/images/pointerOnNavbar.svg">
           Dashboard</a>
-        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit1 = true" (mouseout)="hoverEdit1 = false" routerLink="#">
-          <img *ngIf="hoverEdit1"  src="assets/images/pointerOnNavbar.svg">
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit1 = true" (mouseout)="hoverEdit1 = false" routerLink="manage-groups" routerLinkActive #link2 ="routerLinkActive">
+          <img *ngIf="hoverEdit1 || link2.isActive"  src="assets/images/pointerOnNavbar.svg">
           Manage Groups</a>
-        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit2 = true" (mouseout)="hoverEdit2 = false" routerLink="#">
-          <img *ngIf="hoverEdit2"  src="assets/images/pointerOnNavbar.svg">
+        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit2 = true" (mouseout)="hoverEdit2 = false" routerLink="settings" routerLinkActive #link3 ="routerLinkActive">
+          <img *ngIf="hoverEdit2 || link3.isActive"  src="assets/images/pointerOnNavbar.svg">
           Settings</a>
-        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit3 = true" (mouseout)="hoverEdit3 = false" routerLink="#">
-          <img *ngIf="hoverEdit3"  src="assets/images/pointerOnNavbar.svg">
+        <a href="#" class=" bg-light p-2 text-center" (mouseover)="hoverEdit3 = true" (mouseout)="hoverEdit3 = false" routerLink="help" routerLinkActive #link4 ="routerLinkActive">
+          <img *ngIf="hoverEdit3 || link4.isActive"  src="assets/images/pointerOnNavbar.svg">
           Help</a>
-        <a href="#" class=" bg-light p-2 text-center"  (mouseover)="hoverEdit4 = true" (mouseout)="hoverEdit4 = false"routerLink="#">
-          <img *ngIf="hoverEdit4"  src="assets/images/pointerOnNavbar.svg">
+        <a href="#" class=" bg-light p-2 text-center"  (mouseover)="hoverEdit4 = true" (mouseout)="hoverEdit4 = false"routerLink="about-us" routerLinkActive #link5 ="routerLinkActive">
+          <img *ngIf="hoverEdit4 || link5.isActive"  src="assets/images/pointerOnNavbar.svg">
           About Us</a>
-        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit5 = true" (mouseout)="hoverEdit5 = false">
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit5 = true" (onclick)="authService.LogOut()" (mouseout)="hoverEdit5 = false"> 
           <img *ngIf="hoverEdit5"  src="assets/images/pointerOnNavbar.svg">
           Log Out</a>
       </div>

@@ -17,15 +17,33 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu'
 import { MatDialogModule } from '@angular/material/dialog';
+import { MyAuthService } from './auth.service';
+
 import { ChooseGroupComponent } from './choose-group/choose-group.component';
 import { ViewPostsComponent } from './view-posts/view-posts.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFirestoreModule } from '@angular/fire/firestore';
-// import { AngularFireStorageModule } from '@angular/fire/storage';
-// import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ManageGroupsComponent } from './manage-groups/manage-groups.component';
+import { SettingsComponent } from './settings/settings.component';
+import { HelpComponent } from './help/help.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth,getAuth, Auth } from '@angular/fire/auth';
+import { FirebaseApp, initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { CommonModule } from "@angular/common";
+
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
+
+import { getStorage, provideStorage } 
+from '@angular/fire/storage';
+import { getAnalytics, provideAnalytics } 
+from '@angular/fire/analytics';
+
 
 const config = {
    apiKey: "AIzaSyDao74-CDtE1BEhceNsG2033rm1-JPIdJQ",
@@ -38,6 +56,7 @@ const config = {
 };
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +67,11 @@ const config = {
     UserPageComponent,
     ChooseGroupComponent,
     ViewPostsComponent,
+    ManageGroupsComponent,
+    SettingsComponent,
+    HelpComponent,
+    AboutUsComponent,
+
 
   ],
   imports: [
@@ -56,14 +80,23 @@ const config = {
     BrowserAnimationsModule,
     NgSelectModule,
     FormsModule,
-    ReactiveFormsModule
-    // AngularFireModule.initializeApp(config),
-    // AngularFirestoreModule, // firestore
-    // AngularFireAuthModule, // auth
-    // AngularFireStorageModule // storage
+    ReactiveFormsModule,
+    CommonModule,
+    ScrollingModule,
+    InfiniteScrollModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage()),
+    provideAnalytics(() => getAnalytics())
+
+
 
   ],
-  providers: [],
+  providers: [
+    MyAuthService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

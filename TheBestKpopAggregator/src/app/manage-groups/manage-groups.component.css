@@ -1,0 +1,9 @@
+#unavailable{
+    height: 100vh;
+}
+
+#unavailable p{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}

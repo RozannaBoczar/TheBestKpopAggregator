@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { MyAuthService } from '../auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,8 @@ export class NavbarComponent implements OnInit {
   hoverEdit3 = false;
   hoverEdit4 = false;
   hoverEdit5 = false;
-  constructor() { }
+  
+  constructor(public authService: MyAuthService) { }
 
   ngOnInit(): void {
 
@@ -24,8 +26,6 @@ export class NavbarComponent implements OnInit {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-
-
   }
 
 }

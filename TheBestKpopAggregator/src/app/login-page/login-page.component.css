@@ -24,6 +24,24 @@ button#login-button{
     border-width: 5px;
     font-size: 25px;
     color: #F559B1!important;
+   
 
 }
+
+#passwordInput{
+    padding-right: 20px;
+    background: url(/assets/images/loginForm2.svg) no-repeat;
+    background-position: 550px 30px;
+
+}
+
+#emailInput{
+    padding-right: 20px;
+    background: url(/assets/images/loginForm.svg) no-repeat;
+    background-position: 550px 30px;
+    
+}
+
+
+
 

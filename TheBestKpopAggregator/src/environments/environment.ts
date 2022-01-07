@@ -2,9 +2,28 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth,getAuth, Auth } from '@angular/fire/auth';
+import { FirebaseApp, initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+
+
 export const environment = {
+  firebase: {
+    projectId: 'kpopaggreagtor',
+    appId: '1:609541919620:web:11022e94b07d5b871b03d1',
+    databaseURL: 'https://kpopaggreagtor-default-rtdb.firebaseio.com',
+    storageBucket: 'kpopaggreagtor.appspot.com',
+    apiKey: 'AIzaSyDao74-CDtE1BEhceNsG2033rm1-JPIdJQ',
+    authDomain: 'kpopaggreagtor.firebaseapp.com',
+    messagingSenderId: '609541919620',
+    measurementId: 'G-10FJTDK3V4',
+  },
   production: false
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file
@@ -34,5 +53,5 @@ export const environment = {
 // };
 
 // // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+// export const app = initializeApp(environment.firebase);
+// export const auth = getAuth();

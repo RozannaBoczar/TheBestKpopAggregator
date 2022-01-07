@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MyAuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -8,12 +10,27 @@ import { FormControl } from '@angular/forms';
 })
 export class RegisterPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public authService: MyAuthService,
+    private readonly router: Router) { }
 
   email = new FormControl('name@example.com');
   password = new FormControl('password');
   
   ngOnInit(): void {
+  }
+
+  SignUp(email:string, password:string) {
+    this.authService
+      .SignUp(email, password)
+      .then(()=>{
+        this.router.navigate(['login-page']);
+        window.alert("You a re signed up! Please, log in!")
+      })
+      .catch((e) => {
+        window.alert("Wrong email or password. Try again!")
+        console.log(e.message);
+      });
   }
 
 }

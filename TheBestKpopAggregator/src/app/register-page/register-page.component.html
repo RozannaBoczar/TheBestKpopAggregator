@@ -14,7 +14,7 @@
                             <div class="img-text">
                                 <label for="exampleFormControlInput1" class="form-label">
                                   <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
-                                  <input type="email" class="css-input form-control"  [formControl]="email" id="exampleFormControlInput1"/>
+                                  <input type="email" class="css-input form-control"  [formControl]="email" id="emailInput" #userEmail required/>
                                   
                                 </label>
                                 <!-- <img src="assets/images/Rectangle 533.svg"> -->
@@ -28,11 +28,22 @@
 
                           <label for="exampleFormControlInput1" class="form-label">
                             <!-- <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"> -->
-                            <input type="password" class="css-input form-control" [formControl]="password" id="exampleFormControlInput1" />
+                            <input type="password" class="css-input form-control" [formControl]="password" id="passwordInput" #userPassword required/>
                           </label>
 
                         </div>
                         
+                        <div class="p-2 d-flex justify-content-center">
+
+                          <button id="login-button" (click)="SignUp(userEmail.value, userPassword.value)">
+                      
+                            <img  src="assets/images/logIn.svg" width=90% height=90%>
+                            <!-- //class="img-fluid " -->
+                        </button>
+                        
+                        <span id="register" class="align-self-center">Click to register!</span>
+                        </div>
+
                         <div class="p-2 d-flex justify-content-center">
 
                           <button id="login-button" routerLink="/login-page">
@@ -40,7 +51,8 @@
                             <img  src="assets/images/logIn.svg" width=90% height=90%>
                             <!-- //class="img-fluid " -->
                         </button>
-                        <span id="register" class="align-self-center">Click to register!</span>
+                        
+                        <span id="register" class="align-self-center">Back to Log In page</span>
                         </div>
 
                       
