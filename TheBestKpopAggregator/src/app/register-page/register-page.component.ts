@@ -17,6 +17,8 @@ export class RegisterPageComponent implements OnInit {
   email = new FormControl('name@example.com');
   password = new FormControl('password');
   
+  alarmContent = "";
+
   ngOnInit(): void {
   }
 
@@ -25,9 +27,12 @@ export class RegisterPageComponent implements OnInit {
       .SignUp(email, password)
       .then(()=>{
         this.router.navigate(['login-page']);
-        window.alert("You a re signed up! Please, log in!")
+        window.alert("You a re signed up! Please, log in!");
+        this.alarmContent = "You a re signed up! Please, log in!";
+
       })
       .catch((e) => {
+        this.alarmContent = "Wrong email or password. Try again!";
         window.alert("Wrong email or password. Try again!")
         console.log(e.message);
       });
