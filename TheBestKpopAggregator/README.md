@@ -2,6 +2,37 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
+This project is for purpose of a class "Techniki Programowania Frontendowego".
+
+The application was created for kpop fans who use social medias such as Facebook, Twitter, Instagram. These social media are necessary to be up to date with information about the idols. The application merges together these three social media.
+
+Unfortuneatly the data are taken from mocks and just three pages were designed and created: login page, register page and user page where user can see data fetched from mock.
+
+The authorization for this application is done using Firebase (https://firebase.google.com/) authentication (just email and password).
+
+![](./images/firebaseAuth.png)
+
+The login page:
+
+![](./images/loginPage.png)
+
+The register page:
+
+![](./images/registerPage.png)
+
+The user page:
+The user is able to:
+- register
+- login
+- view posts from three example bands from three social media (one post contains image, text, date)
+
+![](./images/userPage1.png)
+
+![](./images/userPage2.png)
+
+The pages that are not created:
+
+![](./images/userPage3.png)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -20,7 +51,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Unit tests were left default. There were just changes to provide the Firestore Authentication key.
 
-![](./images/uniTests.png)
+![](./images/unitTests.png)
 
 ## Running end-to-end tests
 
