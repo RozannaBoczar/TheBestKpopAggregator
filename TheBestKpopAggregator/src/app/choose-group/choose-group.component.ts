@@ -76,6 +76,7 @@ export class ChooseGroupComponent implements OnInit {
   public selectSocialMedia(liczba: number){
     this.selectedMedia = SOCIALMEDIA[liczba];
     this.socialMedia = this.selectedMedia;
+    console.log(this.selectedMedia.name);
     this.choose(liczba);
     
   }

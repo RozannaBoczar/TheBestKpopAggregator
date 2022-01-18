@@ -3,8 +3,8 @@
 
     <div class="col-12 p-2 d-flex flex-column justify-content-center viewPosts" *ngIf="band && socialMedia">
 
-        <div class="p-2 d-flex justify-content-center info">
-            <h2> {{band.name | uppercase}} {{socialMedia.name | uppercase}}</h2>
+        <div class="p-2 d-flex justify-content-center info" > 
+            <h2 id="bandSociaInfo">{{band.name | uppercase}} {{socialMedia.name | uppercase}}</h2>
         </div>
 
         <div infinite-scroll 

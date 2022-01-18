@@ -16,8 +16,8 @@ export class LoginPageComponent implements OnInit {
     password: string;
   }> = new EventEmitter();
 
-  email = new FormControl('name@example.com');
-  password = new FormControl('password');
+  email = new FormControl('');
+  password = new FormControl('');
   
   constructor( 
     public authService: MyAuthService,

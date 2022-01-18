@@ -3,6 +3,7 @@ import { Band } from '../Band';
 import { SocialMedia } from '../SOCIALMEDIA';
 import { POSTS } from '../PostsMock';
 import { Post } from '../Posts';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view-posts',
@@ -12,44 +13,25 @@ import { Post } from '../Posts';
 export class ViewPostsComponent implements OnInit {
 
 
-  @Input() band?: Band;
-
-  @Input() socialMedia?:SocialMedia;
-
+  
+  @Input() socialMedia:SocialMedia;
+  @Input() band: Band;
   posts : Post[];
-  count = 3;
+ // currentPosts : Post[];
+  //count = 3;
 
   constructor() { 
    
   }
 
   ngOnInit(): void {
-    this.posts = POSTS.slice(0, this.count);
+    //this.currentPosts = POSTS;
+    this.posts = POSTS //this.currentPosts;//.slice(0, this.count);
   }
-
-  // @HostListener("window:scroll", [])
-  // onWindowScroll(): void {
-  //   console.log("woof");
-  //   if (this.bottomReached()) {
-  //     this.posts = POSTS.slice(0, this.count++);
-
-  //   }
-  // }
-
-  // bottomReached(): boolean {
-  //   return (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
-  // }
   
   onScrollDown(ev: any) {
     console.log("scrolled down!!", ev);
-    this.posts.push(POSTS[this.count++]);
 
   }
-
-  // onScrollUp(ev: any) {
-  //   console.log("scrolled up!", ev);
-  //   this.posts = POSTS.slice(0, this.count++);
-  // }
-
 
 }
