@@ -14,8 +14,8 @@ export class RegisterPageComponent implements OnInit {
     public authService: MyAuthService,
     private readonly router: Router) { }
 
-  email = new FormControl('name@example.com');
-  password = new FormControl('password');
+  email = new FormControl('');
+  password = new FormControl('');
   
   alarmContent = "";
 

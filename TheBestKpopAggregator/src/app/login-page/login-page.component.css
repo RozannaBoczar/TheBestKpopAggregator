@@ -16,6 +16,16 @@ button#login-button{
     font-size: 30px;
 }
 
+#login-text{
+    color: #F559B1;
+    font-size: 30px;
+}
+
+#register-text{
+    color: #F559B1;
+    font-size: 30px;
+}
+
 .css-input{
     border-radius: 60px;
     border-color: #F559B1;
