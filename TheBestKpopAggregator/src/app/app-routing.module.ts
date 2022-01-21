@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login-page', pathMatch: 'full'},
 
   { path: 'login-page', component: LoginPageComponent },
-
+  {path: 'about-us', component: AboutUsComponent},
   { path: 'register-page', component: RegisterPageComponent },
   { path: 'user-page', redirectTo:'user-page/choose-groups' },
   { path: 'user-page', component: UserPageComponent,

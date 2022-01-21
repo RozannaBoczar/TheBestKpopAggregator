@@ -1,5 +1,6 @@
 #unavailable{
-    height: 100vh;
+    height: 100vh; 
+    /* max-height: 900; */
 }
 
 #unavailable p{
@@ -7,3 +8,6 @@
     color: white;
     font-weight: bold;
 }
+img.fit{
+    size: 80%;
+} 

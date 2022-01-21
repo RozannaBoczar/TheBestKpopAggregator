@@ -2,8 +2,28 @@
     height: 100vh;
 }
 
-#unavailable p{
+.main p{
     font-size: 50px;
     color: white;
     font-weight: bold;
+}
+
+.help p{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.desc p{
+    font-size: 30px;
+    color: white;
+    /* font-weight: bold; */
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: white;
 }

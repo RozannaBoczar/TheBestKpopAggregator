@@ -36,4 +36,9 @@ export class LoginPageComponent implements OnInit {
     })
   }
 
+  seeABoutUs(){
+    this.router.navigate(['about-us']);
+  }
+
+
 }
