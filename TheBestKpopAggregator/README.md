@@ -33,6 +33,8 @@ The user is able to:
 The pages that are not created:
 
 ![](./images/userPage3.png)
+
+There is also Help page and About Us page
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
