@@ -37,12 +37,13 @@ import { CommonModule } from "@angular/common";
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
+//import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 
 import { getStorage, provideStorage } 
 from '@angular/fire/storage';
 import { getAnalytics, provideAnalytics } 
 from '@angular/fire/analytics';
+//import { NotAllowedComponent } from './not-allowed/not-allowed.component';
 
 
 const config = {
@@ -71,6 +72,7 @@ const config = {
     SettingsComponent,
     HelpComponent,
     AboutUsComponent,
+    //NotAllowedComponent,
 
 
   ],
@@ -84,6 +86,7 @@ const config = {
     CommonModule,
     ScrollingModule,
     InfiniteScrollModule,
+   // AngularFireAuthGuard,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),

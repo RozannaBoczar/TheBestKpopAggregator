@@ -11,6 +11,7 @@ import { HelpComponent } from './help/help.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MyAuthService } from './auth.service';
 
+
 const routes: Routes = [ 
   { path: '', redirectTo: '/login-page', pathMatch: 'full'},
 

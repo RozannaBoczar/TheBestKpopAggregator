@@ -34,6 +34,10 @@ export class LoginPageComponent implements OnInit {
       window.alert("Wrong email or password!");
       console.log(e.message);
     })
+    // .then(() => {
+    //   window.location.reload();
+    //   });
+      
   }
 
   seeABoutUs(){

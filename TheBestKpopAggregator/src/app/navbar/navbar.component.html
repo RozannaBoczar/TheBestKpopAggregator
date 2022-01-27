@@ -34,7 +34,7 @@
         <a href="#" class=" bg-light p-2 text-center"  (mouseover)="hoverEdit4 = true" (mouseout)="hoverEdit4 = false"routerLink="about-us" routerLinkActive #link5 ="routerLinkActive">
           <img *ngIf="hoverEdit4 || link5.isActive"  src="assets/images/pointerOnNavbar.svg">
           About Us</a>
-        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit5 = true" (onclick)="authService.LogOut()" (mouseout)="hoverEdit5 = false"> 
+        <a href="#" class="bg-light p-2 text-center" (mouseover)="hoverEdit5 = true" (click)="logout()" (mouseout)="hoverEdit5 = false"> 
           <img *ngIf="hoverEdit5"  src="assets/images/pointerOnNavbar.svg">
           Log Out</a>
       </div>
