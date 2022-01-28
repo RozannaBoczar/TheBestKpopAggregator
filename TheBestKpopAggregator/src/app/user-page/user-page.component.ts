@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MyAuthService } from '../auth.service';
 import { Auth, signInWithEmailAndPassword,   createUserWithEmailAndPassword,  signOut } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
@@ -16,12 +16,16 @@ export class UserPageComponent implements OnInit {
 
   constructor(public auth: MyAuthService) { 
   }
+  
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   this.isLoggedIn$ = this.auth.loggedIn$ ;
+  // }
 
   ngOnInit(): void {
     //this.auth.isLoggedIn();
     //this.auth.isLoggedIn();
-    this.isLoggedIn$ = this.auth.loggedIn$ ;//(auth =>this.isLogged  = auth);
-
+    //this.isLoggedIn$ = this.auth.loggedIn$ ;//(auth =>this.isLogged  = auth);
+    this.auth.loggedIn$.subscribe(auth=> this.isLogged=auth);
   }
 
 

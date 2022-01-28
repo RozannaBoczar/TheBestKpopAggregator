@@ -1,5 +1,9 @@
-<div *ngIf="(isLoggedIn$ | async)">
+<div *ngIf="auth.loggedIn$ | async">
     <app-navbar></app-navbar>
+</div>
+
+<div *ngIf="!(auth.loggedIn$ | async)">
+    <app-not-allowed></app-not-allowed>>
 </div>
 
 <!-- <ng-template #elseBlock>

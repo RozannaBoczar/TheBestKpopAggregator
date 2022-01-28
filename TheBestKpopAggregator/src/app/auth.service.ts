@@ -19,9 +19,9 @@ import { Auth, signInWithEmailAndPassword,   createUserWithEmailAndPassword,  si
 export class MyAuthService {
   
 //currentUser;
-loggedIn = new Subject<boolean>();
+private loggedIn : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 //loggedIn = BehaviorSubject(this.currentUser);
-loggedIn$ = this.loggedIn.asObservable();
+public loggedIn$: Observable<boolean> = this.loggedIn.asObservable();
 
   constructor(
     private auth:Auth

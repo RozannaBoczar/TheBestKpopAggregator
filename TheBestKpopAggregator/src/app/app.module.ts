@@ -43,6 +43,7 @@ import { getStorage, provideStorage }
 from '@angular/fire/storage';
 import { getAnalytics, provideAnalytics } 
 from '@angular/fire/analytics';
+import { NotAllowedComponent } from './not-allowed/not-allowed.component';
 //import { NotAllowedComponent } from './not-allowed/not-allowed.component';
 
 
@@ -72,6 +73,7 @@ const config = {
     SettingsComponent,
     HelpComponent,
     AboutUsComponent,
+    NotAllowedComponent,
     //NotAllowedComponent,
 
 
