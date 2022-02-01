@@ -24,7 +24,7 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginPageComponent ],
+      declarations: [ LoginPageComponent, UserPageComponent ],
       imports:[
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideFirestore(() => getFirestore()),
@@ -56,8 +56,11 @@ describe('LoginPageComponent', () => {
     expect(component2).toBeTruthy();
   });
 
-  // it('logout', ()=>{
-  //   el = fixture2.debugElement.query(By.css(""))
-  // })
+  it('falseLogin', () => {
+    component.SignIn("rozffffffffft.com", "woofwoof");
+    fixture.detectChanges();
+    expect(component2).toBeFalsy();
+  });
+
 
 });

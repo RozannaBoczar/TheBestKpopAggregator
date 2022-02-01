@@ -14,9 +14,9 @@
                     <div class="d-flex flex-column justify-content-center col-12">
                       <div class="p-2 d-flex justify-content-center">
                             <div class="img-text">
-                                <label for="exampleFormControlInput1" class="form-label">
+                                <label for="exampleFormControlInput1" class="form-label" >
                                   <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
-                                  <input type="email" class="css-input form-control"  [formControl]="email" id="emailInput" #userEmail required/>
+                                  <input type="email" class="css-input form-control"  [formControl]="email" id="emailInput" autocomplete="new-password" #userEmail required/>
                               
                                 </label>
                                 <!-- <img src="assets/images/Rectangle 533.svg"> -->
@@ -30,7 +30,7 @@
 
                           <label for="exampleFormControlInput1" class="form-label">
                             <!-- <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"> -->
-                            <input type="password" class="css-input form-control" [formControl]="password" id="passwordInput" #userPassword required />
+                            <input type="password" class="css-input form-control" [formControl]="password" id="passwordInput" autocomplete="new-password" #userPassword required />
                           </label>
 
                         </div>

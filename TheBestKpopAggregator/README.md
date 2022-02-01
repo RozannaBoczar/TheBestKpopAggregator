@@ -30,11 +30,19 @@ The user is able to:
 
 ![](./images/userPage2.png)
 
+Help Page:
+
+![](./images/help.png)
+
+About Us Page:
+
+![](./images/aboutUs.png)
+
 The pages that are not created:
 
 ![](./images/userPage3.png)
 
-There is also Help page and About Us page
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -51,7 +59,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Unit tests were left default. There were just changes to provide the Firestore Authentication key.
+Most of unit tests were left default. They were changeg to provide the Firestore Authentication key.
+Unit tests for login-page Component were added: for login with correct data and login with wrong data.
 
 ![](./images/unitTests.png)
 
@@ -75,6 +84,14 @@ In the subfolder "cypress" can be find three files:
 
 ![](./images/e2eTests3.png)
 ![](./images/e2eTests4.png)
+
+## Responsive website
+IS DEAD
+
+## Shortcuts and Animation
+When user is logged int, there is a possibility to log out with pressing CTR+L.
+Animation was used in choose-group Component and it's just making bigger and smaller social media signs when hover/chose it.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
